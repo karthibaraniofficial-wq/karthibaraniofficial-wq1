@@ -1,0 +1,121 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" width="100%" height="100%">
+  <defs>
+    <!-- Card Surface Gradient -->
+    <linearGradient id="idCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+
+    <filter id="idShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+
+    <style>
+      .mono-id {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      }
+      .sans-id {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="8" y="8" width="944" height="204" rx="16" fill="url(#idCardBg)" stroke="#E2E8F0" stroke-width="1.5" filter="url(#idShadow)"/>
+
+  <!-- Left: Biometric / ID Chip Badge -->
+  <g transform="translate(32, 26)">
+    <!-- ID Chip Graphic -->
+    <rect x="0" y="0" width="160" height="166" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+    
+    <!-- Chip Contact Graphic -->
+    <rect x="52" y="18" width="56" height="42" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.2"/>
+    <line x1="80" y1="18" x2="80" y2="60" stroke="#F59E0B" stroke-width="1"/>
+    <line x1="52" y1="39" x2="108" y2="39" stroke="#F59E0B" stroke-width="1"/>
+    <rect x="66" y="28" width="28" height="22" rx="3" fill="#FFFBEB" stroke="#F59E0B" stroke-width="0.8"/>
+
+    <!-- Operator Handle & Title -->
+    <text x="80" y="84" text-anchor="middle" class="mono-id" font-size="11" font-weight="800" fill="#0F172A">KARTHIKEYAN M</text>
+    <text x="80" y="100" text-anchor="middle" class="mono-id" font-size="8.5" font-weight="600" fill="#0284C7">ID // KM-2026-AI</text>
+
+    <!-- Barcode Simulation -->
+    <g transform="translate(20, 115)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#0F172A" stroke-width="2"/>
+      <line x1="5" y1="0" x2="5" y2="20" stroke="#0F172A" stroke-width="1"/>
+      <line x1="9" y1="0" x2="9" y2="20" stroke="#0F172A" stroke-width="3"/>
+      <line x1="16" y1="0" x2="16" y2="20" stroke="#0F172A" stroke-width="1.5"/>
+      <line x1="22" y1="0" x2="22" y2="20" stroke="#0F172A" stroke-width="2.5"/>
+      <line x1="29" y1="0" x2="29" y2="20" stroke="#0F172A" stroke-width="1"/>
+      <line x1="34" y1="0" x2="34" y2="20" stroke="#0F172A" stroke-width="4"/>
+      <line x1="43" y1="0" x2="43" y2="20" stroke="#0F172A" stroke-width="1"/>
+      <line x1="49" y1="0" x2="49" y2="20" stroke="#0F172A" stroke-width="2"/>
+      <line x1="56" y1="0" x2="56" y2="20" stroke="#0F172A" stroke-width="3"/>
+      <line x1="64" y1="0" x2="64" y2="20" stroke="#0F172A" stroke-width="1.5"/>
+      <line x1="71" y1="0" x2="71" y2="20" stroke="#0F172A" stroke-width="2.5"/>
+      <line x1="80" y1="0" x2="80" y2="20" stroke="#0F172A" stroke-width="1"/>
+      <line x1="86" y1="0" x2="86" y2="20" stroke="#0F172A" stroke-width="3"/>
+      <line x1="94" y1="0" x2="94" y2="20" stroke="#0F172A" stroke-width="1.5"/>
+      <line x1="102" y1="0" x2="102" y2="20" stroke="#0F172A" stroke-width="2"/>
+      <line x1="110" y1="0" x2="110" y2="20" stroke="#0F172A" stroke-width="3.5"/>
+      <line x1="118" y1="0" x2="118" y2="20" stroke="#0F172A" stroke-width="1"/>
+    </g>
+    <text x="80" y="150" text-anchor="middle" class="mono-id" font-size="7.5" fill="#94A3B8">AUTHENTICATED BUILDER</text>
+  </g>
+
+  <!-- Center: Identity Specs -->
+  <g transform="translate(216, 26)">
+    <!-- Header Badge -->
+    <rect x="0" y="0" width="176" height="20" rx="10" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+    <text x="88" y="14" text-anchor="middle" class="mono-id" font-size="9" font-weight="700" fill="#4F46E5" letter-spacing="0.5">DEVELOPER IDENTITY CARD</text>
+    <text x="188" y="15" class="sans-id" font-size="12" font-weight="700" fill="#0F172A">
+      OPERATOR PROFILE &amp; SPECIALIZATIONS
+    </text>
+
+    <!-- 4 Structured Specification Rows -->
+    <g transform="translate(0, 34)" class="sans-id" font-size="11.5">
+      <!-- Row 1: Academic -->
+      <g transform="translate(0, 0)">
+        <text x="0" y="14" class="mono-id" font-size="9.5" font-weight="700" fill="#64748B">FIELD // ACADEMICS</text>
+        <text x="140" y="14" font-weight="700" fill="#0F172A">B.E. Computer Science and Engineering — Artificial Intelligence &amp; Machine Learning</text>
+      </g>
+
+      <!-- Row 2: Focus Areas -->
+      <g transform="translate(0, 28)">
+        <text x="0" y="14" class="mono-id" font-size="9.5" font-weight="700" fill="#64748B">FOCUS // CORE</text>
+        <text x="140" y="14" font-weight="600" fill="#334155">AI/ML Engineering, Multimodal Agents, Generative AI &amp; WebGL / 3D Graphics</text>
+      </g>
+
+      <!-- Row 3: Competitions & Expeditions -->
+      <g transform="translate(0, 56)">
+        <text x="0" y="14" class="mono-id" font-size="9.5" font-weight="700" fill="#64748B">TRACK // EXPEDITIONS</text>
+        <text x="140" y="14" font-weight="600" fill="#334155">Smart India Hackathon 2026 (SIH26167, Team Targaryen) • Science Expo 2026</text>
+      </g>
+
+      <!-- Row 4: Builder Mindset -->
+      <g transform="translate(0, 84)">
+        <text x="0" y="14" class="mono-id" font-size="9.5" font-weight="700" fill="#64748B">MINDSET // PRINCIPLE</text>
+        <text x="140" y="14" font-weight="600" fill="#0284C7">"A prototype that exists beats a perfect idea that doesn't. Build &gt; Talk."</text>
+      </g>
+    </g>
+
+    <!-- Bottom Highlights Strip -->
+    <g transform="translate(0, 146)">
+      <rect x="0" y="0" width="124" height="24" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="10" cy="12" r="3" fill="#0284C7"/>
+      <text x="18" y="16" class="mono-id" font-size="9" font-weight="600" fill="#334155">AUTONOMOUS DAGs</text>
+
+      <rect x="132" y="0" width="124" height="24" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="142" cy="12" r="3" fill="#6366F1"/>
+      <text x="150" y="16" class="mono-id" font-size="9" font-weight="600" fill="#334155">3D GLSL SHADERS</text>
+
+      <rect x="264" y="0" width="124" height="24" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="274" cy="12" r="3" fill="#10B981"/>
+      <text x="282" y="16" class="mono-id" font-size="9" font-weight="600" fill="#334155">FULL-STACK TS/PY</text>
+
+      <rect x="396" y="0" width="124" height="24" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="406" cy="12" r="3" fill="#F59E0B"/>
+      <text x="414" y="16" class="mono-id" font-size="9" font-weight="600" fill="#334155">GAME ENGINES</text>
+    </g>
+  </g>
+</svg>
+

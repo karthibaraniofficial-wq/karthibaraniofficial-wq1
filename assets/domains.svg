@@ -1,0 +1,151 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 250" width="100%" height="100%">
+  <defs>
+    <!-- Card Surface Gradient -->
+    <linearGradient id="domainCardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+
+    <!-- Outer Container Gradient -->
+    <linearGradient id="mainBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+
+    <!-- Filter -->
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+
+    <style>
+      .mono-d {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      }
+      .sans-d {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Outer Container -->
+  <rect x="8" y="8" width="944" height="234" rx="16" fill="url(#mainBg)" stroke="#E2E8F0" stroke-width="1.5" filter="url(#cardShadow)"/>
+
+  <!-- Top System Header -->
+  <g transform="translate(28, 24)">
+    <rect x="0" y="0" width="138" height="20" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="69" y="14" text-anchor="middle" class="mono-d" font-size="9" font-weight="700" fill="#0284C7" letter-spacing="0.5">ENGINEERING DOMAINS</text>
+    <text x="150" y="15" class="sans-d" font-size="12" font-weight="700" fill="#0F172A">
+      WHAT I BUILD  •  <tspan font-weight="400" fill="#64748B">Core Technical Competencies &amp; Systems Architecture</tspan>
+    </text>
+  </g>
+
+  <!-- 4-COLUMN CARDS -->
+  <!-- ================= CARD 1: AI SYSTEMS ================= -->
+  <g transform="translate(28, 56)">
+    <rect x="0" y="0" width="212" height="166" rx="12" fill="url(#domainCardBg)" stroke="#E2E8F0" stroke-width="1.2"/>
+    <rect x="12" y="12" width="30" height="30" rx="8" fill="#E0F2FE" stroke="#BAE6FD" stroke-width="1"/>
+    <circle cx="27" cy="27" r="5" fill="#0284C7"/>
+    <text x="50" y="24" class="mono-d" font-size="9" font-weight="700" fill="#0284C7">01 / INTELLIGENCE</text>
+    <text x="50" y="38" class="sans-d" font-size="13" font-weight="800" fill="#0F172A">AI SYSTEMS</text>
+
+    <!-- Content Items -->
+    <g transform="translate(14, 58)" class="sans-d" font-size="11" fill="#334155">
+      <circle cx="4" cy="8" r="2" fill="#0284C7"/>
+      <text x="12" y="11" font-weight="600">Generative AI &amp; LLMs</text>
+
+      <circle cx="4" cy="28" r="2" fill="#0284C7"/>
+      <text x="12" y="31" font-weight="500">Autonomous Agent DAGs</text>
+
+      <circle cx="4" cy="48" r="2" fill="#0284C7"/>
+      <text x="12" y="51" font-weight="500">Computer Vision (YOLO/CV)</text>
+
+      <circle cx="4" cy="68" r="2" fill="#0284C7"/>
+      <text x="12" y="71" font-weight="500">Multimodal Voice &amp; Vision</text>
+
+      <circle cx="4" cy="88" r="2" fill="#0284C7"/>
+      <text x="12" y="91" font-weight="500">PyTorch &amp; Scikit-learn</text>
+    </g>
+  </g>
+
+  <!-- ================= CARD 2: WEB SYSTEMS ================= -->
+  <g transform="translate(254, 56)">
+    <rect x="0" y="0" width="212" height="166" rx="12" fill="url(#domainCardBg)" stroke="#E2E8F0" stroke-width="1.2"/>
+    <rect x="12" y="12" width="30" height="30" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+    <rect x="22" y="22" width="10" height="10" rx="2" fill="#6366F1"/>
+    <text x="50" y="24" class="mono-d" font-size="9" font-weight="700" fill="#6366F1">02 / ARCHITECTURE</text>
+    <text x="50" y="38" class="sans-d" font-size="13" font-weight="800" fill="#0F172A">WEB SYSTEMS</text>
+
+    <!-- Content Items -->
+    <g transform="translate(14, 58)" class="sans-d" font-size="11" fill="#334155">
+      <circle cx="4" cy="8" r="2" fill="#6366F1"/>
+      <text x="12" y="11" font-weight="600">React 18 &amp; 19 Ecosystem</text>
+
+      <circle cx="4" cy="28" r="2" fill="#6366F1"/>
+      <text x="12" y="31" font-weight="500">Next.js 14 (App Router)</text>
+
+      <circle cx="4" cy="48" r="2" fill="#6366F1"/>
+      <text x="12" y="51" font-weight="500">TypeScript (Strict Mode)</text>
+
+      <circle cx="4" cy="68" r="2" fill="#6366F1"/>
+      <text x="12" y="71" font-weight="500">FastAPI &amp; Python 3.12</text>
+
+      <circle cx="4" cy="88" r="2" fill="#6366F1"/>
+      <text x="12" y="91" font-weight="500">Node.js &amp; WebSockets</text>
+    </g>
+  </g>
+
+  <!-- ================= CARD 3: DATA & CLOUD ================= -->
+  <g transform="translate(480, 56)">
+    <rect x="0" y="0" width="212" height="166" rx="12" fill="url(#domainCardBg)" stroke="#E2E8F0" stroke-width="1.2"/>
+    <rect x="12" y="12" width="30" height="30" rx="8" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+    <polygon points="27,20 34,31 20,31" fill="#10B981"/>
+    <text x="50" y="24" class="mono-d" font-size="9" font-weight="700" fill="#10B981">03 / STORAGE &amp; INFRA</text>
+    <text x="50" y="38" class="sans-d" font-size="13" font-weight="800" fill="#0F172A">DATA &amp; CLOUD</text>
+
+    <!-- Content Items -->
+    <g transform="translate(14, 58)" class="sans-d" font-size="11" fill="#334155">
+      <circle cx="4" cy="8" r="2" fill="#10B981"/>
+      <text x="12" y="11" font-weight="600">PostgreSQL Relational DB</text>
+
+      <circle cx="4" cy="28" r="2" fill="#10B981"/>
+      <text x="12" y="31" font-weight="500">Supabase SSR &amp; Auth RLS</text>
+
+      <circle cx="4" cy="48" r="2" fill="#10B981"/>
+      <text x="12" y="51" font-weight="500">Vercel Edge Cloud Deployment</text>
+
+      <circle cx="4" cy="68" r="2" fill="#10B981"/>
+      <text x="12" y="71" font-weight="500">Firebase Realtime Services</text>
+
+      <circle cx="4" cy="88" r="2" fill="#10B981"/>
+      <text x="12" y="91" font-weight="500">Docker Containerization</text>
+    </g>
+  </g>
+
+  <!-- ================= CARD 4: EXPERIMENTAL ================= -->
+  <g transform="translate(706, 56)">
+    <rect x="0" y="0" width="226" height="166" rx="12" fill="url(#domainCardBg)" stroke="#E2E8F0" stroke-width="1.2"/>
+    <rect x="12" y="12" width="30" height="30" rx="8" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1"/>
+    <circle cx="27" cy="27" r="5" fill="#F59E0B"/>
+    <text x="50" y="24" class="mono-d" font-size="9" font-weight="700" fill="#F59E0B">04 / CREATIVE LABS</text>
+    <text x="50" y="38" class="sans-d" font-size="13" font-weight="800" fill="#0F172A">EXPERIMENTAL</text>
+
+    <!-- Content Items -->
+    <g transform="translate(14, 58)" class="sans-d" font-size="11" fill="#334155">
+      <circle cx="4" cy="8" r="2" fill="#F59E0B"/>
+      <text x="12" y="11" font-weight="600">Three.js &amp; GLSL Shaders</text>
+
+      <circle cx="4" cy="28" r="2" fill="#F59E0B"/>
+      <text x="12" y="31" font-weight="500">Godot 4 Game Engines</text>
+
+      <circle cx="4" cy="48" r="2" fill="#F59E0B"/>
+      <text x="12" y="51" font-weight="500">Geospatial Maps (MapLibre)</text>
+
+      <circle cx="4" cy="68" r="2" fill="#F59E0B"/>
+      <text x="12" y="71" font-weight="500">Human-AI Interactive UIs</text>
+
+      <circle cx="4" cy="88" r="2" fill="#F59E0B"/>
+      <text x="12" y="91" font-weight="500">Hackathons &amp; Speed Builds</text>
+    </g>
+  </g>
+</svg>
+

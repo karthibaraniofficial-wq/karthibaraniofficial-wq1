@@ -1,0 +1,163 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="dbgBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+
+    <!-- Code Block Gradient -->
+    <linearGradient id="codeBoxBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+
+    <filter id="dbgShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+
+    <style>
+      .mono-m {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      }
+      .sans-m {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="8" y="8" width="944" height="204" rx="16" fill="url(#dbgBg)" stroke="#E2E8F0" stroke-width="1.5" filter="url(#dbgShadow)"/>
+
+  <!-- Left: DEBUGGING MYSELF (Code Loop) -->
+  <g transform="translate(28, 22)">
+    <!-- Header -->
+    <rect x="0" y="0" width="144" height="20" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="72" y="14" text-anchor="middle" class="mono-m" font-size="9" font-weight="700" fill="#6366F1" letter-spacing="0.5">DEBUGGING MYSELF</text>
+    <text x="156" y="15" class="sans-m" font-size="11.5" font-weight="700" fill="#0F172A">
+      OPERATOR EXECUTION LOOP
+    </text>
+
+    <!-- Code Card Container -->
+    <rect x="0" y="30" width="420" height="136" rx="10" fill="url(#codeBoxBg)" stroke="#E2E8F0" stroke-width="1.2"/>
+
+    <!-- Mac-style micro dots -->
+    <circle cx="16" cy="44" r="3.5" fill="#EF4444"/>
+    <circle cx="28" cy="44" r="3.5" fill="#F59E0B"/>
+    <circle cx="40" cy="44" r="3.5" fill="#10B981"/>
+    <text x="60" y="47" class="mono-m" font-size="9" fill="#94A3B8">karthi_runtime.ts</text>
+
+    <!-- Code lines -->
+    <g transform="translate(16, 68)" class="mono-m" font-size="11">
+      <text x="0" y="0">
+        <tspan fill="#6366F1" font-weight="700">function</tspan> <tspan fill="#0284C7" font-weight="700">lifeCycle</tspan>() {
+      </text>
+      <text x="16" y="18">
+        <tspan fill="#0F172A">sleep();</tspan>    <tspan fill="#94A3B8">// → sometimes ⏳</tspan>
+      </text>
+      <text x="16" y="34">
+        <tspan fill="#0F172A">coffee();</tspan>   <tspan fill="#94A3B8">// → optional ☕</tspan>
+      </text>
+      <text x="16" y="50">
+        <tspan fill="#0284C7" font-weight="700">build();</tspan>    <tspan fill="#10B981" font-weight="600">// → always ⚡</tspan>
+      </text>
+      <text x="16" y="66">
+        <tspan fill="#0F172A">break();</tspan>    <tspan fill="#F59E0B" font-weight="600">// → frequently 💥</tspan>
+      </text>
+      <text x="16" y="82">
+        <tspan fill="#0F172A">fix();</tspan>      <tspan fill="#0284C7" font-weight="600">// → eventually 🔧</tspan>
+      </text>
+      <text x="0" y="98">
+        <tspan fill="#6366F1" font-weight="700">repeat</tspan>();    <tspan fill="#64748B">// → infinite loop 🔁</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="486" y1="24" x2="486" y2="196" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- Right: THE CONTRIBUTION MATRIX -->
+  <g transform="translate(516, 22)">
+    <!-- Header -->
+    <rect x="0" y="0" width="168" height="20" rx="10" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+    <text x="84" y="14" text-anchor="middle" class="mono-m" font-size="9" font-weight="700" fill="#059669" letter-spacing="0.5">THE CONTRIBUTION MATRIX</text>
+    <text x="180" y="15" class="sans-m" font-size="11.5" font-weight="700" fill="#0F172A">
+      EVIDENCE OF CODE COMMITS
+    </text>
+
+    <!-- Description -->
+    <text x="0" y="48" class="sans-m" font-size="12" fill="#475569" font-style="italic">
+      "Empirical digital evidence that I occasionally leave my room,
+    </text>
+    <text x="0" y="66" class="sans-m" font-size="12" fill="#475569" font-style="italic">
+      hydrate, and commit code to the digital universe."
+    </text>
+
+    <!-- Stylized Grid of Contribution Squares (Simulated Mini Heatmap) -->
+    <g transform="translate(0, 84)">
+      <!-- Row 1 -->
+      <rect x="0" y="0" width="14" height="14" rx="3" fill="#D1FAE5"/>
+      <rect x="18" y="0" width="14" height="14" rx="3" fill="#6EE7B7"/>
+      <rect x="36" y="0" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="54" y="0" width="14" height="14" rx="3" fill="#047857"/>
+      <rect x="72" y="0" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="90" y="0" width="14" height="14" rx="3" fill="#6EE7B7"/>
+      <rect x="108" y="0" width="14" height="14" rx="3" fill="#D1FAE5"/>
+      <rect x="126" y="0" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="144" y="0" width="14" height="14" rx="3" fill="#047857"/>
+      <rect x="162" y="0" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="180" y="0" width="14" height="14" rx="3" fill="#6EE7B7"/>
+      <rect x="198" y="0" width="14" height="14" rx="3" fill="#047857"/>
+      <rect x="216" y="0" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="234" y="0" width="14" height="14" rx="3" fill="#34D399"/>
+      <rect x="252" y="0" width="14" height="14" rx="3" fill="#059669"/>
+      <rect x="270" y="0" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="288" y="0" width="14" height="14" rx="3" fill="#6EE7B7"/>
+      <rect x="306" y="0" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="324" y="0" width="14" height="14" rx="3" fill="#047857"/>
+      <rect x="342" y="0" width="14" height="14" rx="3" fill="#34D399"/>
+      <rect x="360" y="0" width="14" height="14" rx="3" fill="#059669"/>
+      <rect x="378" y="0" width="14" height="14" rx="3" fill="#10B981"/>
+
+      <!-- Row 2 -->
+      <rect x="0" y="18" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="18" y="18" width="14" height="14" rx="3" fill="#047857"/>
+      <rect x="36" y="18" width="14" height="14" rx="3" fill="#34D399"/>
+      <rect x="54" y="18" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="72" y="18" width="14" height="14" rx="3" fill="#059669"/>
+      <rect x="90" y="18" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="108" y="18" width="14" height="14" rx="3" fill="#6EE7B7"/>
+      <rect x="126" y="18" width="14" height="14" rx="3" fill="#047857"/>
+      <rect x="144" y="18" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="162" y="18" width="14" height="14" rx="3" fill="#34D399"/>
+      <rect x="180" y="18" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="198" y="18" width="14" height="14" rx="3" fill="#6EE7B7"/>
+      <rect x="216" y="18" width="14" height="14" rx="3" fill="#047857"/>
+      <rect x="234" y="18" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="252" y="18" width="14" height="14" rx="3" fill="#6EE7B7"/>
+      <rect x="270" y="18" width="14" height="14" rx="3" fill="#059669"/>
+      <rect x="288" y="18" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="306" y="18" width="14" height="14" rx="3" fill="#34D399"/>
+      <rect x="324" y="18" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="342" y="18" width="14" height="14" rx="3" fill="#047857"/>
+      <rect x="360" y="18" width="14" height="14" rx="3" fill="#10B981"/>
+      <rect x="378" y="18" width="14" height="14" rx="3" fill="#34D399"/>
+    </g>
+
+    <!-- Metric Status Pills -->
+    <g transform="translate(0, 130)">
+      <rect x="0" y="0" width="124" height="24" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="10" cy="12" r="3" fill="#10B981"/>
+      <text x="18" y="16" class="mono-m" font-size="9" font-weight="600" fill="#334155">BUILD CONSISTENCY</text>
+
+      <rect x="132" y="0" width="128" height="24" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="142" cy="12" r="3" fill="#0284C7"/>
+      <text x="150" y="16" class="mono-m" font-size="9" font-weight="600" fill="#334155">ZERO SHELFWARE</text>
+
+      <rect x="268" y="0" width="134" height="24" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="278" cy="12" r="3" fill="#6366F1"/>
+      <text x="286" y="16" class="mono-m" font-size="9" font-weight="600" fill="#334155">PROTOTYPE TO PROD</text>
+    </g>
+  </g>
+</svg>
+

@@ -1,0 +1,263 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 270" width="100%" height="100%">
+  <defs>
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+
+    <!-- Stat Pill Gradient -->
+    <linearGradient id="pillBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+
+    <!-- Bot Chassis Gradient -->
+    <linearGradient id="botChassis" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+
+    <linearGradient id="botVisor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+
+    <linearGradient id="holoGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Dot Pattern -->
+    <pattern id="dotGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#94A3B8" fill-opacity="0.2"/>
+    </pattern>
+
+    <!-- Filters -->
+    <filter id="softShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      @keyframes floatK01 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+      @keyframes blinkK01 {
+        0%, 90%, 100% { transform: scaleY(1); }
+        95% { transform: scaleY(0.12); }
+      }
+      @keyframes waveAntenna {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(10deg); }
+      }
+      @keyframes pulsePulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.35; transform: scale(1.2); }
+      }
+      @keyframes pingRadar {
+        0% { r: 3px; opacity: 0.9; }
+        100% { r: 12px; opacity: 0; }
+      }
+      @keyframes holoFlicker {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 0.85; }
+      }
+
+      .floating-k01 {
+        animation: floatK01 3.6s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .k01-eyes {
+        animation: blinkK01 4.2s infinite;
+        transform-origin: center;
+      }
+      .k01-antenna {
+        animation: waveAntenna 2.8s ease-in-out infinite;
+        transform-origin: 140px 65px;
+      }
+      .pulse-beacon {
+        animation: pulsePulse 2s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .ping-beacon {
+        animation: pingRadar 2.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        transform-origin: center;
+      }
+      .holo-cone {
+        animation: holoFlicker 2s ease-in-out infinite;
+      }
+      .mono-text {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      }
+      .sans-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="8" y="8" width="944" height="254" rx="18" fill="url(#cardBg)" stroke="#E2E8F0" stroke-width="1.5" filter="url(#softShadow)"/>
+  <rect x="8" y="8" width="944" height="254" rx="18" fill="url(#dotGrid)"/>
+
+  <!-- Left Container Divider Line -->
+  <line x1="280" y1="24" x2="280" y2="246" stroke="#E2E8F0" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+  <!-- ================= LEFT: K-01 CHARACTER ================= -->
+  <g id="k01-character" class="floating-k01" transform="translate(10, 10)">
+    <!-- Radar Aura Ring -->
+    <circle cx="130" cy="120" r="75" fill="none" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4 4"/>
+    <circle cx="130" cy="120" r="50" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+
+    <!-- Thruster Shadow & Hover Flame -->
+    <ellipse cx="130" cy="202" rx="30" ry="5" fill="#0F172A" opacity="0.1"/>
+    <ellipse cx="130" cy="182" rx="14" ry="4" fill="#38BDF8" opacity="0.7" filter="url(#glowCyan)"/>
+
+    <!-- Legs / Hover Stabilizers -->
+    <rect x="110" y="162" width="10" height="16" rx="4" fill="#CBD5E1"/>
+    <rect x="140" y="162" width="10" height="16" rx="4" fill="#CBD5E1"/>
+
+    <!-- Torso Chassis -->
+    <rect x="100" y="115" width="60" height="52" rx="16" fill="url(#botChassis)" stroke="#CBD5E1" stroke-width="1.8"/>
+
+    <!-- Core Holographic Projector Badge -->
+    <circle cx="130" cy="142" r="8" fill="#0F172A"/>
+    <circle cx="130" cy="142" r="4.5" fill="#38BDF8" filter="url(#glowCyan)"/>
+    
+    <!-- Holographic Beam extending downwards -->
+    <polygon points="124,146 136,146 148,172 112,172" fill="url(#holoGlow)" class="holo-cone"/>
+    <text x="130" y="166" text-anchor="middle" class="mono-text" font-size="8" font-weight="700" fill="#0284C7">AI ⟡</text>
+
+    <!-- Arms Holding Micro-Laptop -->
+    <path d="M 100 128 Q 88 140 106 150" fill="none" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 160 128 Q 172 140 154 150" fill="none" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Micro Laptop -->
+    <rect x="112" y="144" width="36" height="20" rx="3" fill="#0F172A" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="115" y="146" width="30" height="14" rx="2" fill="#0284C7"/>
+    <!-- Terminal Lines on Laptop Screen -->
+    <line x1="118" y1="151" x2="134" y2="151" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="118" y1="155" x2="128" y2="155" stroke="#A5F3FC" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="139" cy="155" r="1.5" fill="#34D399"/>
+
+    <!-- Head Chassis -->
+    <rect x="94" y="55" width="72" height="56" rx="20" fill="url(#botChassis)" stroke="#CBD5E1" stroke-width="1.8"/>
+
+    <!-- Screen Visor -->
+    <rect x="103" y="66" width="54" height="34" rx="12" fill="url(#botVisor)"/>
+
+    <!-- Expressive Digital Eyes -->
+    <g class="k01-eyes">
+      <!-- Left Eye -->
+      <rect x="112" y="77" width="12" height="11" rx="3.5" fill="#38BDF8" filter="url(#glowCyan)"/>
+      <rect x="115" y="79" width="4" height="4" rx="1.5" fill="#FFFFFF"/>
+      <!-- Right Eye -->
+      <rect x="136" y="77" width="12" height="11" rx="3.5" fill="#38BDF8" filter="url(#glowCyan)"/>
+      <rect x="139" y="79" width="4" height="4" rx="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Ears / Head Sensors -->
+    <rect x="89" y="72" width="6" height="18" rx="3" fill="#94A3B8"/>
+    <rect x="165" y="72" width="6" height="18" rx="3" fill="#94A3B8"/>
+
+    <!-- Antenna & Signal Ping -->
+    <g class="k01-antenna">
+      <line x1="130" y1="55" x2="130" y2="34" stroke="#94A3B8" stroke-width="2.8" stroke-linecap="round"/>
+      <circle cx="130" cy="32" r="5" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.5"/>
+      <circle cx="130" cy="32" r="10" fill="none" stroke="#F59E0B" stroke-width="1" stroke-dasharray="2 2" opacity="0.7"/>
+    </g>
+
+    <!-- Nameplate Under Bot -->
+    <rect x="82" y="218" width="96" height="20" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="130" y="232" text-anchor="middle" class="mono-text" font-size="9" font-weight="700" fill="#0F172A">K-01 COMPANION</text>
+  </g>
+
+  <!-- ================= RIGHT: DIAGNOSTIC HUD ================= -->
+  <g id="hud-panel" transform="translate(306, 26)">
+    <!-- Header Row -->
+    <g id="hud-header">
+      <rect x="0" y="0" width="168" height="22" rx="6" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="8" y="15" class="mono-text" font-size="9.5" font-weight="700" fill="#0284C7" letter-spacing="0.5">◈ COMPANION TELEMETRY</text>
+
+      <text x="180" y="15" class="sans-text" font-size="12" font-weight="700" fill="#0F172A">
+        MEET K-01  •  <tspan font-weight="400" fill="#64748B">The Unofficial README AI Assistant</tspan>
+      </text>
+
+      <!-- Live Heartbeat (Far Right) -->
+      <g transform="translate(560, 0)">
+        <rect x="0" y="0" width="70" height="22" rx="11" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+        <circle cx="12" cy="11" r="3" fill="#10B981" class="pulse-beacon"/>
+        <circle cx="12" cy="11" r="6" fill="none" stroke="#10B981" stroke-width="1" class="ping-beacon"/>
+        <text x="22" y="15" class="mono-text" font-size="9" font-weight="600" fill="#10B981">LIVE</text>
+      </g>
+    </g>
+
+    <!-- 4 Diagnostic Cards (2x2 Grid) -->
+    <!-- Card 1: Current Task -->
+    <g transform="translate(0, 36)">
+      <rect x="0" y="0" width="308" height="68" rx="12" fill="url(#pillBg)" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="14" y="20" class="mono-text" font-size="9.5" font-weight="700" fill="#64748B">CURRENT TASK</text>
+      <circle cx="292" cy="17" r="3" fill="#0284C7"/>
+      <text x="14" y="40" class="sans-text" font-size="12.5" font-weight="700" fill="#0F172A">
+        Exploring Impossible Ideas
+      </text>
+      <text x="14" y="56" class="mono-text" font-size="10" font-weight="500" fill="#0284C7">
+        &gt; compiling prototypes &amp; agents...
+      </text>
+    </g>
+
+    <!-- Card 2: CPU Utilization -->
+    <g transform="translate(322, 36)">
+      <rect x="0" y="0" width="308" height="68" rx="12" fill="url(#pillBg)" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="14" y="20" class="mono-text" font-size="9.5" font-weight="700" fill="#64748B">COGNITIVE CPU</text>
+      <circle cx="292" cy="17" r="3" fill="#6366F1"/>
+      <text x="14" y="40" class="sans-text" font-size="12.5" font-weight="700" fill="#0F172A">
+        Creative Overdrive
+      </text>
+      <text x="14" y="56" class="mono-text" font-size="10" font-weight="500" fill="#6366F1">
+        &gt; 100% bandwidth on experimentation
+      </text>
+    </g>
+
+    <!-- Card 3: Memory Retention -->
+    <g transform="translate(0, 114)">
+      <rect x="0" y="0" width="308" height="68" rx="12" fill="url(#pillBg)" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="14" y="20" class="mono-text" font-size="9.5" font-weight="700" fill="#64748B">MEMORY RETENTION</text>
+      <circle cx="292" cy="17" r="3" fill="#F59E0B"/>
+      <text x="14" y="40" class="sans-text" font-size="12.5" font-weight="700" fill="#0F172A">
+        Questionable
+      </text>
+      <text x="14" y="56" class="mono-text" font-size="10" font-weight="500" fill="#F59E0B">
+        &gt; cache miss on sleep() • 100% on code
+      </text>
+    </g>
+
+    <!-- Card 4: Status -->
+    <g transform="translate(322, 114)">
+      <rect x="0" y="0" width="308" height="68" rx="12" fill="url(#pillBg)" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="14" y="20" class="mono-text" font-size="9.5" font-weight="700" fill="#64748B">SYSTEM STATUS</text>
+      <circle cx="292" cy="17" r="3" fill="#10B981"/>
+      <text x="14" y="40" class="sans-text" font-size="12.5" font-weight="700" fill="#0F172A">
+        Still Building... ●
+      </text>
+      <text x="14" y="56" class="mono-text" font-size="10" font-weight="500" fill="#10B981">
+        &gt; 11+ deployed systems operational
+      </text>
+    </g>
+
+    <!-- Bottom Speech Bubble / Mission Statement -->
+    <g transform="translate(0, 192)">
+      <rect x="0" y="0" width="630" height="26" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="12" y="17" class="sans-text" font-size="11.5" font-weight="500" fill="#334155">
+        💬 <tspan font-weight="600" fill="#0F172A">K-01 says:</tspan> "I monitor the build loop. If something breaks, we learn. If it works, we ship it."
+      </text>
+    </g>
+  </g>
+</svg>
+

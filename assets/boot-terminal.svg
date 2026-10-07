@@ -1,0 +1,124 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="100%" height="100%">
+  <defs>
+    <!-- Window Body Gradient -->
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+
+    <!-- Header Gradient -->
+    <linearGradient id="headerBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+
+    <!-- Shadow -->
+    <filter id="termShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+
+    <style>
+      @keyframes blinkCursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      @keyframes pulseBoot {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+      }
+      .cursor-blink {
+        animation: blinkCursor 1s step-start infinite;
+      }
+      .pulse-boot {
+        animation: pulseBoot 2s ease-in-out infinite;
+      }
+      .mono-term {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      }
+    </style>
+  </defs>
+
+  <!-- Outer Window Shell -->
+  <rect x="8" y="8" width="944" height="244" rx="16" fill="url(#termBg)" stroke="#CBD5E1" stroke-width="1.5" filter="url(#termShadow)"/>
+
+  <!-- Window Header Bar -->
+  <path d="M 8 24 A 16 16 0 0 1 24 8 L 936 8 A 16 16 0 0 1 952 24 L 952 46 L 8 46 Z" fill="url(#headerBg)" stroke="#CBD5E1" stroke-width="1.5"/>
+  <line x1="8" y1="46" x2="952" y2="46" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- macOS Window Control Dots -->
+  <circle cx="28" cy="27" r="5" fill="#EF4444"/>
+  <circle cx="44" cy="27" r="5" fill="#F59E0B"/>
+  <circle cx="60" cy="27" r="5" fill="#10B981"/>
+
+  <!-- Terminal Window Title -->
+  <text x="480" y="31" text-anchor="middle" class="mono-term" font-size="11" font-weight="600" fill="#475569" letter-spacing="0.3">
+    karthi.os — boot-sequence.sh — 960×260
+  </text>
+
+  <!-- Right Metadata Badges in Header -->
+  <rect x="840" y="17" width="94" height="20" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="887" y="31" text-anchor="middle" class="mono-term" font-size="9" font-weight="600" fill="#0284C7">AI RUNTIME ⟡</text>
+
+  <!-- Terminal Body Content -->
+  <g transform="translate(32, 70)" class="mono-term" font-size="12" letter-spacing="0.2">
+    <!-- Line 1: Command Invocation -->
+    <text x="0" y="0">
+      <tspan fill="#0284C7" font-weight="700">&gt; initializing</tspan> 
+      <tspan fill="#0F172A" font-weight="700">karthi.system</tspan> 
+      <tspan fill="#64748B">--profile=builder --env=production --creative=max</tspan>
+    </text>
+
+    <!-- Line 2: AI Modules -->
+    <text x="0" y="24">
+      <tspan fill="#10B981" font-weight="700">[OK]</tspan> 
+      <tspan fill="#334155"> AI &amp; Machine Learning neural engines loaded</tspan> 
+      <tspan fill="#94A3B8">(PyTorch, Gemini 2.0 Live, VLMs)</tspan>
+    </text>
+
+    <!-- Line 3: Curiosity Engine -->
+    <text x="0" y="48">
+      <tspan fill="#10B981" font-weight="700">[OK]</tspan> 
+      <tspan fill="#334155"> Curiosity &amp; experimentation daemon active</tspan> 
+      <tspan fill="#0284C7">(CPU utilization: 100%)</tspan>
+    </text>
+
+    <!-- Line 4: Caffeine Dependency -->
+    <text x="0" y="72">
+      <tspan fill="#F59E0B" font-weight="700">[OK]</tspan> 
+      <tspan fill="#334155"> Caffeine dependency detected</tspan> 
+      <tspan fill="#F59E0B">(status: continuous ingestion required)</tspan>
+    </text>
+
+    <!-- Line 5: Unfinished Projects / Creative Branches -->
+    <text x="0" y="96">
+      <tspan fill="#10B981" font-weight="700">[OK]</tspan> 
+      <tspan fill="#334155"> Unfinished prototypes &amp; creative repositories detected</tspan> 
+      <tspan fill="#94A3B8">(indexed: 11+ systems)</tspan>
+    </text>
+
+    <!-- Line 6: Imagination Overflow -->
+    <text x="0" y="120">
+      <tspan fill="#10B981" font-weight="700">[OK]</tspan> 
+      <tspan fill="#334155"> Imagination overflow guardrails:</tspan> 
+      <tspan fill="#6366F1" font-weight="700">BYPASSED FOR INNOVATION</tspan>
+    </text>
+
+    <!-- Separator Line -->
+    <line x1="0" y1="136" x2="880" y2="136" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3 3"/>
+
+    <!-- Line 7: Final Status -->
+    <text x="0" y="156">
+      <tspan fill="#0F172A" font-weight="800">SYSTEM STATUS:</tspan> 
+      <tspan fill="#10B981" font-weight="800">ONLINE &amp; READY TO BUILD</tspan> 
+      <tspan fill="#64748B"> •  Welcome to the interactive workspace</tspan>
+    </text>
+
+    <!-- Line 8: Interactive Prompt with Blinking Cursor -->
+    <text x="0" y="180">
+      <tspan fill="#0284C7" font-weight="700">guest@karthi.system:~$</tspan> 
+      <tspan fill="#0F172A"> cat ./PORTFOLIO_MANIFEST.md</tspan>
+      <tspan fill="#0284C7" class="cursor-blink" font-weight="800">█</tspan>
+    </text>
+  </g>
+</svg>
+

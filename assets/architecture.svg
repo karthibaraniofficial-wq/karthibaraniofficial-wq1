@@ -1,0 +1,168 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="archBgL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+
+    <!-- Node Card Gradient -->
+    <linearGradient id="nodeBgL" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+
+    <marker id="arrowL" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#0284C7"/>
+    </marker>
+
+    <filter id="archShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+
+    <style>
+      @keyframes streamDot {
+        0% { stroke-dashoffset: 16; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .stream-line {
+        stroke-dasharray: 4 4;
+        animation: streamDot 1.2s linear infinite;
+      }
+      .mono-a {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      }
+      .sans-a {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="8" y="8" width="944" height="244" rx="16" fill="url(#archBgL)" stroke="#E2E8F0" stroke-width="1.5" filter="url(#archShadow)"/>
+
+  <!-- Top Title Header -->
+  <g transform="translate(28, 22)">
+    <rect x="0" y="0" width="158" height="20" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="79" y="14" text-anchor="middle" class="mono-a" font-size="9" font-weight="700" fill="#0284C7" letter-spacing="0.5">SYSTEM ARCHITECTURE</text>
+    <text x="170" y="15" class="sans-a" font-size="12" font-weight="700" fill="#0F172A">
+      END-TO-END OBSERVABLE INTELLIGENCE &amp; AGENT EXECUTION LOOP
+    </text>
+
+    <text x="914" y="15" text-anchor="end" class="mono-a" font-size="9" fill="#94A3B8">PROTOCOL // ZERO-SILENT-FAIL</text>
+  </g>
+
+  <!-- 5 Pipeline Nodes -->
+  <!-- NODE 01: SENSORS & INGESTION -->
+  <g transform="translate(26, 54)">
+    <rect x="0" y="0" width="162" height="180" rx="12" fill="url(#nodeBgL)" stroke="#CBD5E1" stroke-width="1.2"/>
+    <text x="12" y="20" class="mono-a" font-size="8.5" font-weight="700" fill="#0284C7">STAGE 01</text>
+    <text x="12" y="38" class="sans-a" font-size="13" font-weight="800" fill="#0F172A">INGESTION</text>
+    <text x="12" y="52" class="mono-a" font-size="8.5" fill="#64748B">Multispectral &amp; Streams</text>
+
+    <!-- Sub-Pills -->
+    <g transform="translate(10, 66)">
+      <rect x="0" y="0" width="142" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="8" y="16" class="sans-a" font-size="9.5" font-weight="600" fill="#334155">Sentinel-2 Optical EO</text>
+
+      <rect x="0" y="32" width="142" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="8" y="48" class="sans-a" font-size="9.5" font-weight="600" fill="#334155">NISAR / S-1 SAR Radar</text>
+
+      <rect x="0" y="64" width="142" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="8" y="80" class="sans-a" font-size="9.5" font-weight="600" fill="#334155">Telemetry / Audio Stream</text>
+    </g>
+  </g>
+
+  <!-- Connector 1 -> 2 -->
+  <line x1="188" y1="144" x2="208" y2="144" stroke="#0284C7" stroke-width="1.8" class="stream-line" marker-end="url(#arrowL)"/>
+
+  <!-- NODE 02: PERCEPTION CORE -->
+  <g transform="translate(210, 54)">
+    <rect x="0" y="0" width="162" height="180" rx="12" fill="#F0F9FF" stroke="#0284C7" stroke-width="1.5"/>
+    <text x="12" y="20" class="mono-a" font-size="8.5" font-weight="700" fill="#0284C7">STAGE 02</text>
+    <text x="12" y="38" class="sans-a" font-size="13" font-weight="800" fill="#0F172A">PERCEPTION</text>
+    <text x="12" y="52" class="mono-a" font-size="8.5" fill="#0284C7">Multimodal VLM Core</text>
+
+    <!-- Sub-Pills -->
+    <g transform="translate(10, 66)">
+      <rect x="0" y="0" width="142" height="24" rx="6" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1"/>
+      <text x="8" y="16" class="sans-a" font-size="9.5" font-weight="600" fill="#0369A1">Gemini 2.0 Live API</text>
+
+      <rect x="0" y="32" width="142" height="24" rx="6" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1"/>
+      <text x="8" y="48" class="sans-a" font-size="9.5" font-weight="600" fill="#0369A1">Spatial Grounding VLM</text>
+
+      <rect x="0" y="64" width="142" height="24" rx="6" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1"/>
+      <text x="8" y="80" class="sans-a" font-size="9.5" font-weight="600" fill="#0369A1">Bounding Coordinates</text>
+    </g>
+  </g>
+
+  <!-- Connector 2 -> 3 -->
+  <line x1="372" y1="144" x2="392" y2="144" stroke="#0284C7" stroke-width="1.8" class="stream-line" marker-end="url(#arrowL)"/>
+
+  <!-- NODE 03: AGENT DAG PIPELINE -->
+  <g transform="translate(394, 54)">
+    <rect x="0" y="0" width="162" height="180" rx="12" fill="url(#nodeBgL)" stroke="#CBD5E1" stroke-width="1.2"/>
+    <text x="12" y="20" class="mono-a" font-size="8.5" font-weight="700" fill="#6366F1">STAGE 03</text>
+    <text x="12" y="38" class="sans-a" font-size="13" font-weight="800" fill="#0F172A">AGENT DAG</text>
+    <text x="12" y="52" class="mono-a" font-size="8.5" fill="#64748B">Autonomous Routing</text>
+
+    <!-- Sub-Pills -->
+    <g transform="translate(10, 66)">
+      <rect x="0" y="0" width="142" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="8" y="16" class="sans-a" font-size="9.5" font-weight="600" fill="#334155">6-Agent Orchestration</text>
+
+      <rect x="0" y="32" width="142" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="8" y="48" class="sans-a" font-size="9.5" font-weight="600" fill="#334155">Dynamic SLA Timers</text>
+
+      <rect x="0" y="64" width="142" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="8" y="80" class="sans-a" font-size="9.5" font-weight="600" fill="#334155">Conjunction Reasoning</text>
+    </g>
+  </g>
+
+  <!-- Connector 3 -> 4 -->
+  <line x1="556" y1="144" x2="576" y2="144" stroke="#0284C7" stroke-width="1.8" class="stream-line" marker-end="url(#arrowL)"/>
+
+  <!-- NODE 04: VALIDATION & GUARDRAILS -->
+  <g transform="translate(578, 54)">
+    <rect x="0" y="0" width="162" height="180" rx="12" fill="url(#nodeBgL)" stroke="#CBD5E1" stroke-width="1.2"/>
+    <text x="12" y="20" class="mono-a" font-size="8.5" font-weight="700" fill="#10B981">STAGE 04</text>
+    <text x="12" y="38" class="sans-a" font-size="13" font-weight="800" fill="#0F172A">VALIDATION</text>
+    <text x="12" y="52" class="mono-a" font-size="8.5" fill="#64748B">Immutable Guardrails</text>
+
+    <!-- Sub-Pills -->
+    <g transform="translate(10, 66)">
+      <rect x="0" y="0" width="142" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="8" y="16" class="sans-a" font-size="9.5" font-weight="600" fill="#334155">Biophysical Physics Gate</text>
+
+      <rect x="0" y="32" width="142" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="8" y="48" class="sans-a" font-size="9.5" font-weight="600" fill="#334155">Supabase Audit Ledger</text>
+
+      <rect x="0" y="64" width="142" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="8" y="80" class="sans-a" font-size="9.5" font-weight="600" fill="#334155">Zero Hallucination</text>
+    </g>
+  </g>
+
+  <!-- Connector 4 -> 5 -->
+  <line x1="740" y1="144" x2="760" y2="144" stroke="#0284C7" stroke-width="1.8" class="stream-line" marker-end="url(#arrowL)"/>
+
+  <!-- NODE 05: OPERATIONAL INTERFACE -->
+  <g transform="translate(762, 54)">
+    <rect x="0" y="0" width="168" height="180" rx="12" fill="url(#nodeBgL)" stroke="#CBD5E1" stroke-width="1.2"/>
+    <text x="12" y="20" class="mono-a" font-size="8.5" font-weight="700" fill="#F59E0B">STAGE 05</text>
+    <text x="12" y="38" class="sans-a" font-size="13" font-weight="800" fill="#0F172A">INTERFACES</text>
+    <text x="12" y="52" class="mono-a" font-size="8.5" fill="#64748B">Operational HUDs</text>
+
+    <!-- Sub-Pills -->
+    <g transform="translate(10, 66)">
+      <rect x="0" y="0" width="148" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="8" y="16" class="sans-a" font-size="9.5" font-weight="600" fill="#334155">Three.js 60 FPS Globe</text>
+
+      <rect x="0" y="32" width="148" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="8" y="48" class="sans-a" font-size="9.5" font-weight="600" fill="#334155">MapLibre GL Vector HUD</text>
+
+      <rect x="0" y="64" width="148" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="8" y="80" class="sans-a" font-size="9.5" font-weight="600" fill="#334155">Full-Duplex Voice Stream</text>
+    </g>
+  </g>
+</svg>
+
